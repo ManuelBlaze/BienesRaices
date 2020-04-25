@@ -27,6 +27,7 @@ img {
 }
 
 .contenedor {
+    width: 95%;
     max-width: 120rem;
     /* = 1200px*/
     margin: 0 auto;
@@ -85,6 +86,15 @@ h4 {
     display: inline-block;
     text-align: center;
     border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
 }
 
 .boton:hover {
@@ -120,6 +130,13 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
 }
 
 .contenido-header h1 {
@@ -130,10 +147,15 @@ h4 {
 }
 
 .barra {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
@@ -142,8 +164,19 @@ h4 {
 .navegacion a {
     color: white;
     text-decoration: none;
-    font-size: 1.8rem;
-    margin-right: 2rem;
+    font-size: 2.2rem;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
 }
 
 .navegacion a:hover {
@@ -151,21 +184,24 @@ h4 {
     color: #71B100;
 }
 
-.navegacion a:last-of-type {
-    margin: 0;
-}
-
 
 /** Iconos Nosotros**/
 
-.iconos-nosotros {
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .icono {
-    flex-basis: calc(33.3% - 1rem);
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
 }
 
 .icono h3 {
